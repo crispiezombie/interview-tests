@@ -1,6 +1,6 @@
 import org.example.model.Passenger;
 import org.example.model.Aeroplane;
-import org.example.model.PassengerService;
+import org.example.model.PassengerSevice;
 import org.example.model.PassengerType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

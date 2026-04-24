@@ -1,5 +1,6 @@
 package org.example.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
@@ -7,12 +8,29 @@ public class PassengerService {
 
     public List<Passenger> filterPassengersByType(List<Passenger> people, PassengerType... passengerType)
     {
-        throw new UnsupportedOperationException ("Implement function that filters passengers by given types");
+//        throw new UnsupportedOperationException ("Implement function that filters passengers by given types");
+
+        List<Passenger> passType = new ArrayList<>();
+
+        // loop through Passenger list, compare passenger type to given type, add to list if equal
+        for (Passenger person : people) {
+//            if (passengerType == person.getType()) {passType.add(person);}
+        }
+        return passType;
     }
 
-    public List<Passenger> filterPassengersByFareAsInt(List<Passenger> people, int fareTo)
-    {
-        throw new UnsupportedOperationException ("Implement function that filters passengers with a fare price less than or equal to fareTo");
+    // Similar to filterPassengersByType
+    public List<Passenger> filterPassengersByFareAsInt(List<Passenger> people, int fareTo) {
+        //throw new UnsupportedOperationException ("Implement function that filters passengers with a fare price less than or equal to fareTo");
+
+        List<Passenger> passFare = new ArrayList<>();
+
+        // loop through Passenger list, compare passenger type to given type, add to list if equal
+        for (Passenger person : people) {
+            if (fareTo == person.getFarePrice()) {passFare.add(person);}
+        }
+        return passFare;
+    }
     }
 
     public Passenger upgradeToFirstClass(Passenger passenger)
@@ -25,6 +43,7 @@ public class PassengerService {
         throw new UnsupportedOperationException ("Implement function that returns total cost of passenger (fare price + (5 * luggage count))");
     }
 
+    //Unsure of difference between filterByType and filterPassengersByType
     public List<Passenger> filterByType(List<Passenger> passengers, PassengerType... passengerType)
     {
         throw new UnsupportedOperationException ("Implement function that filters passengers by given types");
